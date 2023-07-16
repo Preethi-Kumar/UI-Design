@@ -477,7 +477,7 @@ p, a, ul, li {font-family: 'segoe-normal';}
   
   tr td.person h5{
       font-weight: bold;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.4rem;
       font-size: 0.86rem;
       line-height: 0.86rem;
       color: #212529;
@@ -494,7 +494,7 @@ p, a, ul, li {font-family: 'segoe-normal';}
   }
   
   tr td img{
-      width: 35px !important ;
+      width: 39px !important ;
       height: auto;
       border-radius: 50%;
   }
