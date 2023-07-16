@@ -624,6 +624,21 @@ form sup{
         .navbar-toggler{display: none;}
 
         .short-banner img{width: 50px !important;}
+
+        .form-grid-section .form-grid:nth-child(even) {
+            padding-right: 15px;
+        }
+
+        .admin-section-1 .add-customers{display: block;}
+
+        .admin-section-1 .add-customers .import button{width: 100%;}
+
+        .import{display: flex;
+            justify-content: space-between;}
+
+        .admin-section-1 .add-customers button.btn{width: 100%;margin-bottom: 10px;}
+
+
       }
 
 
