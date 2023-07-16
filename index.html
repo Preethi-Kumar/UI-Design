@@ -9,8 +9,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css">
 
-    <title>Hello, world!</title>
+    <title>Holopundits | Home</title>
   </head>
   <body>
 
@@ -560,6 +562,368 @@
 
     </section>
 
+    <section class="admin-section-1 pt-60">
+        <div class="container">
+           <div class="row">
+              <div class="col-12">
+                 <h2 class="text-center up-font text-uppercase">Admin Panel</h2>
+                 <p class="text-center">Topics Management</p>
+                 <div class="add-customers">
+                    <button class="btn d-flex align-items-center">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                          <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h2.25V15a.75.75 0 001.5 0v-2.25H15a.75.75 0 000-1.5h-2.25V9z" clip-rule="evenodd" />
+                       </svg>
+                       Add Customers
+                    </button>
+                    <div class="import d-flex">
+                       <button class="d-flex align-items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                             <path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 01-.517.608 7.45 7.45 0 00-.478.198.798.798 0 01-.796-.064l-.453-.324a1.875 1.875 0 00-2.416.2l-.243.243a1.875 1.875 0 00-.2 2.416l.324.453a.798.798 0 01.064.796 7.448 7.448 0 00-.198.478.798.798 0 01-.608.517l-.55.092a1.875 1.875 0 00-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 01-.064.796l-.324.453a1.875 1.875 0 00.2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 01.796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 01.517-.608 7.52 7.52 0 00.478-.198.798.798 0 01.796.064l.453.324a1.875 1.875 0 002.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 01-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 001.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 01-.608-.517 7.507 7.507 0 00-.198-.478.798.798 0 01.064-.796l.324-.453a1.875 1.875 0 00-.2-2.416l-.243-.243a1.875 1.875 0 00-2.416-.2l-.453.324a.798.798 0 01-.796.064 7.462 7.462 0 00-.478-.198.798.798 0 01-.517-.608l-.091-.55a1.875 1.875 0 00-1.85-1.566h-.344zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd" />
+                          </svg>
+                       </button>
+                       <button>Import</button>
+                       <button>Export</button>
+                    </div>
+                 </div>
+                 <table id="myTable" class="display table table-striped table-bordered table-responsive" style="width:100%">
+                    <thead>
+                       <tr>
+                            <th></th>
+                          <th>Customer</th>
+                          <th>Phone</th>
+                          <th>Balance</th>
+                          <th>Orders</th>
+                          <th>Last Order</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                       <tr>
+                        <td></td>
+                        <td class="person">
+                             <div>
+                               <img src="/assets/profile/pexels-spencer-selover-428328.jpg" alt="John Delaney">
+                             </div>
+                             <div>
+                               <h5>John Delaney</h5>
+                               <p>ID: #MN2048</p>
+                             </div>
+                           </td>
+                          <td>078 5054 887</td>
+                          <td>$8,562.25</td>
+                          <td>41</td>
+                          <td>02 Apr, 2020</td>
+                          <td><span class="badge badge-danger">Blocked</span></td>
+                          <td class="action">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                    <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z" />
+                                    <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
+                                  </svg>
+                                  
+                            </div>
+                        </td>
+                       </tr>
+
+                       <tr>
+                        <td></td>
+                        <td class="person">
+                           <div>
+                             <img src="/assets/profile/pexels-spencer-selover-428328.jpg" alt="John Delaney">
+                           </div>
+                           <div>
+                             <h5>John Delaney</h5>
+                             <p>ID: #MN2048</p>
+                           </div>
+                         </td>
+                        <td>078 5054 887</td>
+                        <td>$8,562.25</td>
+                        <td>41</td>
+                        <td>02 Apr, 2020</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                        <td class="action">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                    <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z" />
+                                    <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
+                                  </svg>
+                                  
+                            </div>
+                        </td>
+                     </tr>
+                       
+           
+                    </tbody>
+                 </table>
+              </div>
+           </div>
+        </div>
+     </section>
+     <section class="admin-section-2 pt-5">
+        <div class="container">
+           <div class="row">
+              <div class="col-12">
+                 <h6>General Information</h6>
+                 <p>Fill all information below</p>
+                 <form>
+                    <div class="row">
+                       <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="productName">Product name <sup>*</sup></label>
+                             <input type="text" class="form-control" id="productName" placeholder="eg: Apple iMac">
+                          </div>
+                       </div>
+                       <div class="col-md-6">
+                          <div class="form-group">
+                             <label for="reference">Reference <sup>*</sup></label>
+                             <input type="text" class="form-control" id="reference" placeholder="eg: Apple iMac">
+                          </div>
+                       </div>
+                       <div class="col-md-12">
+                          <div class="form-group">
+                             <label for="productDescription">Product Description <sup>*</sup></label>
+                             <textarea class="form-control" id="productDescription"></textarea>
+                          </div>
+                       </div>
+                       <div class="col-md-12">
+                          <div class="row">
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                   <label for="productSummary">Product Summary</label>
+                                   <textarea class="form-control" id="productSummary" placeholder="Please enter summary" cols="50"></textarea>
+                                </div>
+                             </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                   <label for="categories">Categories <sup>*</sup></label>
+                                   <select class="form-control" id="categories">
+                                      <option selected>Select</option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                   </select>
+                                </div>
+                                <div class="form-group">
+                                   <label for="price">Price <sup>*</sup></label>
+                                   <input type="text" class="form-control" id="price" placeholder="Enter amount">
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="col-md-12 status-radio">
+                          <div class="form-group">
+                             <p>Status <sup>*</sup></p>
+                             <input type="radio" id="Online" value="Online" name="status" checked>
+                             <label for="Online"><span class="radio-icon"></span>Online</label>
+                             <input type="radio" id="Offline" value="Offline" name="status">
+                             <label for="Offline">Offline</label>
+                             <input type="radio" id="Draft" value="Draft" name="status">
+                             <label for="Draft">Draft</label>
+                          </div>
+                       </div>
+                       <div class="col-md-12 more-info">
+                          <button type="button" class="btn info">
+                             Add More Info
+                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                             </svg>
+                          </button>
+                       </div>
+                    </div>
+                 </form>
+              </div>
+           </div>
+        </div>
+     </section>
+     <section class="pb-5 form-grid-section pt-5 pb-5">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-6 form-grid">
+                 <div>
+                    <h6>Form grid</h6>
+                    <p>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <form>
+                       <div class="row">
+                          <div class="col-md-6">
+                             <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                             </div>
+                          </div>
+                          <div class="col-md-6">
+                             <div class="form-group">
+                                <label for="reference">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                             </div>
+                          </div>
+                          <div class="col-md-12">
+                             <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                             </div>
+                          </div>
+                          <div class="col-md-4">
+                             <div class="form-group">
+                                <label for="state">State</label>
+                                <select class="form-control" id="state">
+                                   <option selected>Choose</option>
+                                   <option value="1">One</option>
+                                   <option value="2">Two</option>
+                                   <option value="3">Three</option>
+                                </select>
+                             </div>
+                          </div>
+                          <div class="col-md-4">
+                             <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" placeholder="City">
+                             </div>
+                          </div>
+                          <div class="col-md-4">
+                             <div class="form-group">
+                                <label for="zip">Zip</label>
+                                <input type="text" class="form-control" id="zip" placeholder="Zip">
+                             </div>
+                          </div>
+                          <div class="col-md-12">
+                             <div class="form-group">
+                                <input type="checkbox" class="" id="checkMeOut">
+                                <label for="checkMeOut">Check me out</label>
+                             </div>
+                          </div>
+                          <div class="col-md-12">
+                             <button type="submit" class="btn btn-submit">Sign in</button>
+                          </div>
+                       </div>
+                    </form>
+                 </div>
+              </div>
+              <div class="col-md-6 form-grid">
+                 <div>
+                    <h6>Floating labels</h6>
+                    <p>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <form>
+                       <div class="row">
+                          <div class="col-md-12">
+                             <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Nik Patel">
+                             </div>
+                          </div>
+                          <div class="col-md-6">
+                             <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                             </div>
+                          </div>
+                          <div class="col-md-6">
+                             <div class="form-group">
+                                <label for="state">State</label>
+                                <select class="form-control" id="state">
+                                   <option selected>Choose</option>
+                                   <option value="1">One</option>
+                                   <option value="2">Two</option>
+                                   <option value="3">Three</option>
+                                </select>
+                             </div>
+                          </div>
+                          <div class="col-md-12">
+                             <div class="form-group">
+                                <label for="address">Comments</label>
+                                <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                             </div>
+                          </div>
+                          <div class="col-md-12">
+                             <div class="form-group">
+                                <input type="checkbox" class="" id="checkMeOut1">
+                                <label for="checkMeOut1">Check me out</label>
+                             </div>
+                          </div>
+                          <div class="col-md-12">
+                             <button class="btn btn-submit" type="submit">Sign in</button>
+                          </div>
+                       </div>
+                    </form>
+                 </div>
+              </div>
+              <div class="col-md-6 form-grid">
+                 <div>
+                    <h6>Basic example</h6>
+                    <form>
+                       <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                       </div>
+                       <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                       </div>
+                       <div class="form-group">
+                          <input type="checkbox" class="" id="checkMeOut2">
+                          <label for="checkMeOut2">Check me out</label>
+                       </div>
+                       <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                 </div>
+              </div>
+              <div class="col-md-6 form-grid">
+                 <div>
+                    <h6>Horizontal Form</h6>
+                    <form>
+                       <div class="form-group row">
+                          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                          <div class="col-sm-10">
+                             <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                          </div>
+                       </div>
+                       <div class="form-group row">
+                          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                          <div class="col-sm-10">
+                             <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                          </div>
+                       </div>
+                       <div class="form-group row">
+                          <label for="retypePassword" class="col-sm-2 col-form-label">Re Password</label>
+                          <div class="col-sm-10">
+                             <input type="password" class="form-control" id="retypePassword" placeholder="Retype Password">
+                          </div>
+                       </div>
+                       <div class="form-group row">
+                          <div class="col-sm-10">
+                             <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                <label class="form-check-label" for="gridCheck1">
+                                Check me out
+                                </label>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="form-group row">
+                          <div class="col-sm-10">
+                             <button type="submit" class="btn btn-submit">Sign in</button>
+                          </div>
+                       </div>
+                    </form>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+
 
     <footer class="footer-section pt-60 pb-60">
 
@@ -567,7 +931,7 @@
 
             <div class="row footer">
 
-                <div class="col-md-4">
+                <div class="col-md-4 logo-col">
 
                     <img src="/assets/images/powered-holopundits-logo.png" alt="footer-logo" class="mb-3">
     
@@ -585,7 +949,7 @@
     
                     <p>No.5 ,Lorem ipsum dolor sit amet, consectetur adipisicing elit, Delhi</p>
     
-                    <p>Call:9988776655</p>
+                    <p>Call: 9988776655</p>
     
                 </div>
 
@@ -597,7 +961,7 @@
     
                     <p>No.5 ,Lorem ipsum dolor sit amet, consectetur adipisicing elit, Delhi</p>
     
-                    <p>Call:9988776655</p>
+                    <p>Call: 9988776655</p>
     
                 </div>
 
@@ -619,6 +983,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
+
+<script>
+   $(document).ready( function () {
+       $('#myTable').DataTable({
+        columnDefs: [{
+      orderable: false,
+      className: 'select-checkbox',
+      targets: 0
+    }],
+    select: {
+      style: 'os',
+      selector: 'td:first-child'
+    },
+        order: [[1, 'asc']] // Optional: set default sorting column
+    });
+   });
+</script>
+
     <script>
 
         $('#toggle').click(function() {
@@ -627,5 +1012,8 @@
         });
 
     </script>
+
+
+
   </body>
 </html>
