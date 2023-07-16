@@ -56,7 +56,11 @@ p, a, ul, li {font-family: 'segoe-normal';}
 
 }
 
-.ar-icons{display: flex;align-items: center;margin-bottom: 20px;}
+.ar-icons{display: flex;align-items: center;margin-bottom: 20px;cursor: pointer;}
+
+.ar-icons.hovered{color: #ef712f;}
+
+.ar-icons.hovered svg{background-color: #ef712f;}
 
 .ar-icons p{margin-bottom: 0;}
 
@@ -643,4 +647,4 @@ form sup{
 
 
   
-   
+  

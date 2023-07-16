@@ -100,21 +100,23 @@
             </div>
             <div class="row mt-5">
                <div class="col-md-6">
-                  <div class="ar-icons">
+                  <div class="ar-icons" id="tab-1">
                      <i class="fa-solid fa-paper-plane"></i>
                      <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit</P>
                   </div>
-                  <div class="ar-icons">
+                  <div class="ar-icons" id="tab-2">
                      <i class="fa-solid fa-paper-plane"></i>
                      <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit</P>
                   </div>
-                  <div class="ar-icons">
+                  <div class="ar-icons" id="tab-3">
                      <i class="fa-solid fa-paper-plane"></i>
                      <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit</P>
                   </div>
                </div>
                <div class="col-md-6">
-                  <img src="/assets/images/tab-banner-01.png">
+                  <img class="tab-1-image" src="/assets/images/tab-banner-01.png">
+                  <img class="tab-2-image d-none" src="/assets/images/tab-banner-02.png">
+                  <img class="tab-3-image d-none" src="/assets/images/tab-banner-03.png">
                </div>
             </div>
          </div>
@@ -1247,5 +1249,45 @@
          });
          
       </script>
+
+<script>
+    $(document).ready(function() {
+      $(".tab-1-image").removeClass("d-none");
+
+      $("#tab-1").hover(
+        function () {
+            $(this).toggleClass("hovered");
+        }
+      );
+  
+      $("#tab-2").hover(
+        function() {
+          $(".tab-2-image").removeClass("d-none");
+          $(".tab-1-image, .tab-3-image").addClass("d-none");
+          $(this).addClass("hovered");
+        },
+        function() {
+          $(".tab-2-image").addClass("d-none");
+          $(".tab-1-image").removeClass("d-none");
+          $(this).removeClass("hovered");
+        }
+      );
+  
+      $("#tab-3").hover(
+        function() {
+          $(".tab-3-image").removeClass("d-none");
+          $(".tab-1-image, .tab-2-image").addClass("d-none");
+          $(this).addClass("hovered");
+        },
+        function() {
+          $(".tab-3-image").addClass("d-none");
+          $(".tab-1-image").removeClass("d-none");
+          $(this).removeClass("hovered");
+        }
+      );
+    });
+  </script>
+  
+
    </body>
 </html>
