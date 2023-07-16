@@ -179,8 +179,8 @@ p, a, ul, li {font-family: 'segoe-normal';}
     .customize-content{background-color: #ef712f38;}
 
     .button_container {
-        position: fixed;
-        top: 3%;
+        position: absolute;
+        top: 30%;
         right: 7%;
         height: 10px;
         width: 35px;
@@ -310,3 +310,21 @@ p, a, ul, li {font-family: 'segoe-normal';}
           left: 0;
         }
       }
+
+      .footer-section{background-image: url(/assets/images/footer-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;}
+
+    .footer-content h5, .footer-content p, .footer-content svg{color: #fff;}
+
+    .footer-content svg{background: #000;
+        padding: 17px;
+        border-radius: 30px;
+        font-size: 25px;}
+
+    .footer-content{text-align: center;}
+
+    .footer{align-items: center;}
+
+    .qr-icons{justify-content: center;}
