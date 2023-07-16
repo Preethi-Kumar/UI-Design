@@ -455,8 +455,11 @@ p, a, ul, li {font-family: 'segoe-normal';}
   .table-striped tbody td{
       box-shadow: none !important;
       border: none;
+      border-bottom: 1px solid #f1f5f9 !important;
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
   }
-  
+
   .table-striped thead td{
       border: none;
       vertical-align: middle;
